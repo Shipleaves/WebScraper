@@ -9,10 +9,11 @@ def login(url, data):
     http_headers = response.info()
     return ''.join(response.readlines())
 
-
+username = raw_input('Enter username: ')
+password = raw_input('Enter password: ')
 url = 'https://oasis-sso.publix.org/ESS/rp/0458/ESS#Taskflow.ESS:mtHome'
-values = {'username' : '',
-          'password' : ''}
+values = {'username' : username,
+          'password' : password}
 
 data = urllib.urlencode(values)
 cookies = cookielib.CookieJar()

@@ -2,12 +2,14 @@ import urllib
 import re
 from twill.commands import *
 
+username = raw_input('Enter username: ')
+password = raw_input('Enter password: ')
 url = 'https://oasis-sso.publix.org/ESS/rp/0458/ESS#Taskflow.ESS:mtHome'
 
 go(url)
 
-fv("myForm", "username", "")
-fv("myForm", "password", "")
+fv("myForm", "username", username)
+fv("myForm", "password", password)
 
 submit('0')
 

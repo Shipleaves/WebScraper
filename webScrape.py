@@ -1,8 +1,8 @@
 import requests
 import sys
 
-EMAIL = 'fill these in'
-PASSWORD = ''
+EMAIL = raw_input('Enter email: ')
+PASSWORD = raw_input('Enter password: ')
 
 URL = 'https://oasis-sso.publix.org/ESS/rp/0458/ESS#Taskflow.ESS:mtHome'
 
